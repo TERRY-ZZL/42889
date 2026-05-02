@@ -1,17 +1,20 @@
 //
-//  CinmaBookingApp.swift
-//  CinmaBooking
+//  CinemaBookingApp.swift
+//  CinemaBooking
 //
-//  Created by Terry on 3/5/2026.
 //
 
 import SwiftUI
 
 @main
-struct CinmaBookingApp: App {
+struct CinemaBookingApp: App {
+
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootTabView()
+
         }
     }
 }
+

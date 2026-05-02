@@ -6,14 +6,28 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DE14788A2FA6933D00DD1E8F /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1478892FA6933D00DD1E8F /* MovieListView.swift */; };
+		DE1478952FA693F600DD1E8F /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1478942FA693E300DD1E8F /* RootTabView.swift */; };
+		DE1478972FA6940400DD1E8F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1478962FA693FA00DD1E8F /* Movie.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		DE1478842FA6933D00DD1E8F /* CinmaBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinmaBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE1478892FA6933D00DD1E8F /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
+		DE1478942FA693E300DD1E8F /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+		DE1478962FA693FA00DD1E8F /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DE1478862FA6933D00DD1E8F /* CinmaBooking */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = CinmaBooking;
+			sourceTree = "<group>";
+		};
+		DE1478982FA6941000DD1E8F /* Perview Content */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Perview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -33,6 +47,8 @@
 			isa = PBXGroup;
 			children = (
 				DE1478862FA6933D00DD1E8F /* CinmaBooking */,
+				DE1478922FA6936200DD1E8F /* Views */,
+				DE1478932FA693A500DD1E8F /* Models */,
 				DE1478852FA6933D00DD1E8F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +59,24 @@
 				DE1478842FA6933D00DD1E8F /* CinmaBooking.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DE1478922FA6936200DD1E8F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE1478942FA693E300DD1E8F /* RootTabView.swift */,
+				DE1478892FA6933D00DD1E8F /* MovieListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE1478932FA693A500DD1E8F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE1478962FA693FA00DD1E8F /* Movie.swift */,
+				DE1478982FA6941000DD1E8F /* Perview Content */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -62,6 +96,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				DE1478862FA6933D00DD1E8F /* CinmaBooking */,
+				DE1478982FA6941000DD1E8F /* Perview Content */,
 			);
 			name = CinmaBooking;
 			packageProductDependencies = (
@@ -119,6 +154,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE14788A2FA6933D00DD1E8F /* MovieListView.swift in Sources */,
+				DE1478952FA693F600DD1E8F /* RootTabView.swift in Sources */,
+				DE1478972FA6940400DD1E8F /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
