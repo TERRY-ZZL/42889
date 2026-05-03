@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE14788A2FA6933D00DD1E8F /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1478892FA6933D00DD1E8F /* MovieListView.swift */; };
 		DE1478952FA693F600DD1E8F /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1478942FA693E300DD1E8F /* RootTabView.swift */; };
 		DE1478972FA6940400DD1E8F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1478962FA693FA00DD1E8F /* Movie.swift */; };
+		DE1478A62FA7E59F00DD1E8F /* Showtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1478A52FA7E59000DD1E8F /* Showtime.swift */; };
+		DE1478A82FA7E60100DD1E8F /* Seat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1478A72FA7E5F900DD1E8F /* Seat.swift */; };
+		DE1478AA2FA7E6A700DD1E8F /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1478A92FA7E68E00DD1E8F /* MovieDetailView.swift */; };
+		DE1478AC2FA7E7C200DD1E8F /* SeatSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1478AB2FA7E7C100DD1E8F /* SeatSelectionView.swift */; };
+		DE1478AD2FA7ED5B00DD1E8F /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1478892FA6933D00DD1E8F /* MovieListView.swift */; };
+		DE1478B32FA7EE8E00DD1E8F /* BookingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1478AE2FA7EDBD00DD1E8F /* BookingStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +22,11 @@
 		DE1478892FA6933D00DD1E8F /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 		DE1478942FA693E300DD1E8F /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
 		DE1478962FA693FA00DD1E8F /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		DE1478A52FA7E59000DD1E8F /* Showtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Showtime.swift; sourceTree = "<group>"; };
+		DE1478A72FA7E5F900DD1E8F /* Seat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seat.swift; sourceTree = "<group>"; };
+		DE1478A92FA7E68E00DD1E8F /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		DE1478AB2FA7E7C100DD1E8F /* SeatSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatSelectionView.swift; sourceTree = "<group>"; };
+		DE1478AE2FA7EDBD00DD1E8F /* BookingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -46,6 +56,7 @@
 		DE14787B2FA6933D00DD1E8F = {
 			isa = PBXGroup;
 			children = (
+				DE14789D2FA7E1E200DD1E8F /* Stores */,
 				DE1478862FA6933D00DD1E8F /* CinmaBooking */,
 				DE1478922FA6936200DD1E8F /* Views */,
 				DE1478932FA693A500DD1E8F /* Models */,
@@ -64,6 +75,8 @@
 		DE1478922FA6936200DD1E8F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DE1478AB2FA7E7C100DD1E8F /* SeatSelectionView.swift */,
+				DE1478A92FA7E68E00DD1E8F /* MovieDetailView.swift */,
 				DE1478942FA693E300DD1E8F /* RootTabView.swift */,
 				DE1478892FA6933D00DD1E8F /* MovieListView.swift */,
 			);
@@ -73,10 +86,20 @@
 		DE1478932FA693A500DD1E8F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DE1478A72FA7E5F900DD1E8F /* Seat.swift */,
+				DE1478A52FA7E59000DD1E8F /* Showtime.swift */,
 				DE1478962FA693FA00DD1E8F /* Movie.swift */,
 				DE1478982FA6941000DD1E8F /* Perview Content */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DE14789D2FA7E1E200DD1E8F /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				DE1478AE2FA7EDBD00DD1E8F /* BookingStore.swift */,
+			);
+			path = Stores;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +177,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE14788A2FA6933D00DD1E8F /* MovieListView.swift in Sources */,
+				DE1478B32FA7EE8E00DD1E8F /* BookingStore.swift in Sources */,
+				DE1478A82FA7E60100DD1E8F /* Seat.swift in Sources */,
 				DE1478952FA693F600DD1E8F /* RootTabView.swift in Sources */,
 				DE1478972FA6940400DD1E8F /* Movie.swift in Sources */,
+				DE1478AC2FA7E7C200DD1E8F /* SeatSelectionView.swift in Sources */,
+				DE1478AD2FA7ED5B00DD1E8F /* MovieListView.swift in Sources */,
+				DE1478AA2FA7E6A700DD1E8F /* MovieDetailView.swift in Sources */,
+				DE1478A62FA7E59F00DD1E8F /* Showtime.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
