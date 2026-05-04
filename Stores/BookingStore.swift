@@ -27,4 +27,8 @@ final class BookingStore: ObservableObject {
             .filter { $0.movieID == movie.id }
             .sorted { $0.startsAt < $1.startsAt }
     }
+
+    func currentShowtime(id: String) -> Showtime? {
+        showtimes.first { $0.id == id }
+    }
 }

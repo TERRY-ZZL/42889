@@ -49,6 +49,9 @@ struct MovieDetailView: View {
         )
         .navigationTitle(movie.title)
         .navigationBarTitleDisplayMode(.inline)
+        .navigationDestination(for: Showtime.self) { st in
+            SeatSelectionView(movie: movie, showtimeID: st.id)
+        }
 
     }
 

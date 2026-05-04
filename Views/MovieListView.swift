@@ -14,13 +14,18 @@ struct MovieListView: View {
                 .ignoresSafeArea()
 
             List(store.movies) { movie in
-                MovieRow(movie: movie)
-                    .listRowBackground(Color.clear)
+                NavigationLink(value: movie) {
+                    MovieRow(movie: movie)
+                }
+                .listRowBackground(Color.clear)
+                .listRowSeparatorTint(.white.opacity(0.08))
             }
             .listStyle(.plain)
             .scrollContentBackground(.hidden)
+
         }
         .navigationTitle("Now Showing")
+        .navigationDestination(for: Movie.self) { MovieDetailView(movie: $0) }
     }
 }
 
