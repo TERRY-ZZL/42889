@@ -11,6 +11,9 @@ struct SeatSelectionView: View {
 
     @EnvironmentObject private var store: BookingStore
     @State private var selected: Set<Seat> = []
+    @State private var confirmedOrder: Order?
+    @State private var navigateToConfirmation = false
+    @State private var lastError: BookingError?
 
     private var showtime: Showtime? { store.currentShowtime(id: showtimeID) }
 
@@ -30,6 +33,19 @@ struct SeatSelectionView: View {
         )
         .navigationTitle("Pick Your Seats")
         .navigationBarTitleDisplayMode(.inline)
+        .background(
+            NavigationLink(
+                destination: confirmedOrder.map { OrderConfirmationView(order: $0) },
+                isActive: $navigateToConfirmation,
+                label: EmptyView.init
+            )
+            .hidden()
+        )
+        .alert(item: $lastError) { err in
+            Alert(title: Text("Heads up"),
+                  message: Text(err.errorDescription ?? "Error"),
+                  dismissButton: .default(Text("OK")))
+        }
     }
 
     private func content(showtime: Showtime) -> some View {
@@ -103,13 +119,16 @@ struct SeatSelectionView: View {
                     .foregroundStyle(.orange)
             }
             Spacer()
-            Text("Selected")
-                .font(.headline)
-                .foregroundStyle(.white)
-                .padding(.horizontal, 26)
-                .padding(.vertical, 12)
-                .background(selected.isEmpty ? Color.gray : Color.orange)
-                .clipShape(Capsule())
+            Button(action: { confirm(showtime: showtime) }) {
+                Text("Confirm")
+                    .font(.headline)
+                    .foregroundStyle(.white)
+                    .padding(.horizontal, 26)
+                    .padding(.vertical, 12)
+                    .background(selected.isEmpty ? Color.gray : Color.orange)
+                    .clipShape(Capsule())
+            }
+            .disabled(selected.isEmpty)
         }
         .padding(16)
         .background(.white.opacity(0.06))
@@ -128,6 +147,19 @@ struct SeatSelectionView: View {
             selected.remove(seat)
         } else {
             selected.insert(seat)
+        }
+    }
+
+    private func confirm(showtime: Showtime) {
+        do {
+            let order = try store.book(seats: selected, in: showtime, of: movie)
+            confirmedOrder = order
+            selected.removeAll()
+            navigateToConfirmation = true
+        } catch let e as BookingError {
+            lastError = e
+        } catch {
+            lastError = .emptySelection
         }
     }
 }
