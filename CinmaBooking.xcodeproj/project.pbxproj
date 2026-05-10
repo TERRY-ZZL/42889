@@ -19,6 +19,7 @@
 		DE1478BF2FA93C4500DD1E8F /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1478BE2FA93C3C00DD1E8F /* Order.swift */; };
 		DE1478C32FA93CB500DD1E8F /* OrderConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1478C22FA93C9700DD1E8F /* OrderConfirmationView.swift */; };
 		DE1478C42FA93D7600DD1E8F /* BookingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1478C12FA93C7300DD1E8F /* BookingService.swift */; };
+		DE1478CE2FB025F000DD1E8F /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1478CD2FB025EA00DD1E8F /* OrdersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		DE1478BE2FA93C3C00DD1E8F /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		DE1478C12FA93C7300DD1E8F /* BookingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingService.swift; sourceTree = "<group>"; };
 		DE1478C22FA93C9700DD1E8F /* OrderConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationView.swift; sourceTree = "<group>"; };
+		DE1478CD2FB025EA00DD1E8F /* OrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -84,6 +86,7 @@
 		DE1478922FA6936200DD1E8F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DE1478CD2FB025EA00DD1E8F /* OrdersView.swift */,
 				DE1478C22FA93C9700DD1E8F /* OrderConfirmationView.swift */,
 				DE1478AB2FA7E7C100DD1E8F /* SeatSelectionView.swift */,
 				DE1478A92FA7E68E00DD1E8F /* MovieDetailView.swift */,
@@ -203,6 +206,7 @@
 				DE1478A82FA7E60100DD1E8F /* Seat.swift in Sources */,
 				DE1478952FA693F600DD1E8F /* RootTabView.swift in Sources */,
 				DE1478BF2FA93C4500DD1E8F /* Order.swift in Sources */,
+				DE1478CE2FB025F000DD1E8F /* OrdersView.swift in Sources */,
 				DE1478972FA6940400DD1E8F /* Movie.swift in Sources */,
 				DE1478AC2FA7E7C200DD1E8F /* SeatSelectionView.swift in Sources */,
 				DE1478AD2FA7ED5B00DD1E8F /* MovieListView.swift in Sources */,

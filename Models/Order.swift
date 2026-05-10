@@ -10,7 +10,7 @@ enum OrderStatus: String, Codable {
     case cancelled
 }
 
-struct Order: Identifiable, Hashable {
+struct Order: Identifiable, Hashable, Codable {
     let id: String
     let movieID: String
     let movieTitle: String
