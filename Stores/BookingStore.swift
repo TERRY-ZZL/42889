@@ -13,14 +13,20 @@ final class BookingStore: ObservableObject {
     @Published private(set) var orders: [Order] = []
 
     let service = BookingService()
+    let repository: MovieRepository
 
     private let ordersKey = "saved_orders"
 
-    init() {
-        movies = Movie.sampleMovies
-        showtimes = Showtime.sampleShowtimes
-        orders = []
+    init(repository: MovieRepository? = nil) {
+        self.repository = repository ?? LocalMovieRepository()
+        reloadFromRepository()
         loadOrders()
+    }
+
+    func reloadFromRepository() {
+        movies = repository.loadMovies()
+        showtimes = repository.generateShowtimes(for: movies)
+        orders = []
     }
 
     func movies(matching keyword: String) -> [Movie] {
@@ -62,10 +68,8 @@ final class BookingStore: ObservableObject {
         guard let showtime = currentShowtime(id: order.showtimeID) else {
             throw BookingError.orderAlreadyCancelled
         }
-
         let (newShowtime, updatedOrder) = try service.cancel(order: order, in: showtime)
         replace(showtime: newShowtime)
-
         if let idx = orders.firstIndex(where: { $0.id == order.id }) {
             orders[idx] = updatedOrder
             saveOrders()

@@ -1,0 +1,196 @@
+[
+  {
+    "id": "m01",
+    "title": "Oppenheimer",
+    "year": 2023,
+    "durationMinutes": 180,
+    "rating": 8.3,
+    "genres": [
+      "Drama",
+      "History"
+    ],
+    "synopsis": "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.",
+    "posterAsset": "poster_oppenheimer"
+  },
+  {
+    "id": "m02",
+    "title": "Dune: Part Two",
+    "year": 2024,
+    "durationMinutes": 166,
+    "rating": 8.5,
+    "genres": [
+      "Sci-Fi",
+      "Adventure"
+    ],
+    "synopsis": "Paul Atreides unites with Chani and the Fremen on a warpath of revenge against the conspirators who destroyed his family.",
+    "posterAsset": "poster_dune_part_two"
+  },
+  {
+    "id": "m03",
+    "title": "Interstellar",
+    "year": 2014,
+    "durationMinutes": 169,
+    "rating": 8.7,
+    "genres": [
+      "Sci-Fi",
+      "Drama"
+    ],
+    "synopsis": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+    "posterAsset": "poster_interstellar"
+  },
+  {
+    "id": "m04",
+    "title": "The Dark Knight",
+    "year": 2008,
+    "durationMinutes": 152,
+    "rating": 9.0,
+    "genres": [
+      "Action",
+      "Crime"
+    ],
+    "synopsis": "Batman faces the Joker, a criminal mastermind who plunges Gotham into chaos.",
+    "posterAsset": "poster_the_dark_knight"
+  },
+  {
+    "id": "m05",
+    "title": "Inception",
+    "year": 2010,
+    "durationMinutes": 148,
+    "rating": 8.8,
+    "genres": [
+      "Action",
+      "Sci-Fi"
+    ],
+    "synopsis": "A thief who steals corporate secrets through dream-sharing technology is tasked with planting an idea in a CEO's mind.",
+    "posterAsset": "poster_inception"
+  },
+  {
+    "id": "m07",
+    "title": "The Godfather",
+    "year": 1972,
+    "durationMinutes": 175,
+    "rating": 9.2,
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "synopsis": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+    "posterAsset": "poster_the_godfather"
+  },
+  {
+    "id": "m08",
+    "title": "Pulp Fiction",
+    "year": 1994,
+    "durationMinutes": 154,
+    "rating": 8.9,
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "synopsis": "The lives of two mob hitmen, a boxer and a pair of diner bandits intertwine in four tales of violence and redemption.",
+    "posterAsset": "poster_pulp_fiction"
+  },
+  {
+    "id": "m11",
+    "title": "Spirited Away",
+    "year": 2001,
+    "durationMinutes": 125,
+    "rating": 8.6,
+    "genres": [
+      "Animation",
+      "Adventure"
+    ],
+    "synopsis": "A ten-year-old girl wanders into a world ruled by gods, witches and spirits, where humans are changed into beasts.",
+    "posterAsset": "poster_spirited_away"
+  },
+  {
+    "id": "m12",
+    "title": "The Shawshank Redemption",
+    "year": 1994,
+    "durationMinutes": 142,
+    "rating": 9.3,
+    "genres": [
+      "Drama"
+    ],
+    "synopsis": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    "posterAsset": "poster_the_shawshank_redemption"
+  },
+  {
+    "id": "m16",
+    "title": "Joker",
+    "year": 2019,
+    "durationMinutes": 122,
+    "rating": 8.4,
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "synopsis": "In Gotham City, mentally troubled comedian Arthur Fleck embarks on a downward spiral that transforms him into the Joker.",
+    "posterAsset": "poster_joker"
+  },
+  {
+    "id": "m17",
+    "title": "Your Name",
+    "year": 2016,
+    "durationMinutes": 106,
+    "rating": 8.4,
+    "genres": [
+      "Animation",
+      "Romance"
+    ],
+    "synopsis": "Two strangers find themselves linked through dreams in a bizarre way, and must work together to bridge space and time.",
+    "posterAsset": "poster_your_name"
+  },
+  {
+    "id": "m18",
+    "title": "Coco",
+    "year": 2017,
+    "durationMinutes": 105,
+    "rating": 8.4,
+    "genres": [
+      "Animation",
+      "Family"
+    ],
+    "synopsis": "Aspiring musician Miguel enters the Land of the Dead to find his great-great-grandfather, a legendary singer.",
+    "posterAsset": "poster_coco"
+  },
+  {
+    "id": "m20",
+    "title": "Whiplash",
+    "year": 2014,
+    "durationMinutes": 107,
+    "rating": 8.5,
+    "genres": [
+      "Drama",
+      "Music"
+    ],
+    "synopsis": "A promising young drummer enrolls at a cut-throat music conservatory where his dreams are mentored by a ruthless instructor.",
+    "posterAsset": "poster_whiplash"
+  },
+  {
+    "id": "m26",
+    "title": "Top Gun: Maverick",
+    "year": 2022,
+    "durationMinutes": 130,
+    "rating": 8.3,
+    "genres": [
+      "Action",
+      "Drama"
+    ],
+    "synopsis": "After thirty years, Maverick is still pushing the envelope as a top naval aviator, training a new generation for a specialized mission.",
+    "posterAsset": "poster_top_gun_maverick"
+  },
+  {
+    "id": "m27",
+    "title": "Barbie",
+    "year": 2023,
+    "durationMinutes": 114,
+    "rating": 6.9,
+    "genres": [
+      "Comedy",
+      "Adventure"
+    ],
+    "synopsis": "Barbie suffers a crisis that leads her to question her world and her existence.",
+    "posterAsset": "poster_barbie"
+  }
+]
