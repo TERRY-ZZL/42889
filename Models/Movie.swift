@@ -1,10 +1,12 @@
 //
 //  Movie.swift
-//  CinemaBooking
+//  CinmaBooking
 //
+//  An immutable value type describing a movie loaded from movies.json.
 //
 
 import Foundation
+
 
 struct Movie: Identifiable, Hashable, Codable {
     let id: String

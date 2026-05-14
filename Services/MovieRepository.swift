@@ -2,6 +2,11 @@
 //  MovieRepository.swift
 //  CinmaBooking
 //
+//  Abstraction over the data source so the UI never cares whether movies
+//  come from a bundled JSON file, a REST API, or a database.
+//
+
+
 
 import Foundation
 
@@ -9,6 +14,8 @@ protocol MovieRepository {
     func loadMovies() -> [Movie]
     func generateShowtimes(for movies: [Movie]) -> [Showtime]
 }
+
+
 
 struct LocalMovieRepository: MovieRepository {
     func loadMovies() -> [Movie] {
@@ -25,6 +32,7 @@ struct LocalMovieRepository: MovieRepository {
         }
     }
 
+    
     func generateShowtimes(for movies: [Movie]) -> [Showtime] {
         let calendar = Calendar.current
         let baseDay = calendar.startOfDay(for: Date())
@@ -68,6 +76,7 @@ struct LocalMovieRepository: MovieRepository {
     }
 }
 
+
 private struct SplitMix64 {
     private var state: UInt64
     init(seed: UInt64) { self.state = seed == 0 ? 0xDEADBEEFCAFEBABE : seed }
@@ -79,3 +88,4 @@ private struct SplitMix64 {
         return z ^ (z >> 31)
     }
 }
+ 

@@ -1,6 +1,6 @@
 //
 //  Order.swift
-//  CinemaBooking
+//  CinmaBooking
 //
 
 import Foundation
@@ -9,8 +9,10 @@ enum OrderStatus: String, Codable {
     case confirmed
     case cancelled
 }
+ 
 
-struct Order: Identifiable, Hashable, Codable {
+
+struct Order: Identifiable, Hashable {
     let id: String
     let movieID: String
     let movieTitle: String
@@ -26,7 +28,9 @@ struct Order: Identifiable, Hashable, Codable {
         seats.sorted().map(\.label).joined(separator: ", ")
     }
 
-    /// Returns a NEW order with a different status (pure, idempotent).
+    
+    
+    /// Returns a NEW order with a different status (pure, idempotent). 
     func with(status: OrderStatus) -> Order {
         Order(id: id, movieID: movieID, movieTitle: movieTitle,
               showtimeID: showtimeID, hall: hall, startsAt: startsAt,

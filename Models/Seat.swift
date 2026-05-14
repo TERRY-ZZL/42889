@@ -3,6 +3,10 @@
 //  CinmaBooking
 //
 
+
+
+import Foundation
+
 struct Seat: Hashable, Codable, Comparable {
     let row: Int
     let column: Int
@@ -17,4 +21,3 @@ struct Seat: Hashable, Codable, Comparable {
         lhs.row == rhs.row ? lhs.column < rhs.column : lhs.row < rhs.row
     }
 }
-

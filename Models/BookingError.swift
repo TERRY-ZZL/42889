@@ -1,7 +1,10 @@
 //
 //  BookingError.swift
-//  CinemaBooking
+//  CinmaBooking
 //
+
+
+ 
 
 import Foundation
 
@@ -11,9 +14,11 @@ enum BookingError: LocalizedError, Identifiable {
     case seatOutOfBounds
     case seatTaken(seats: [Seat])
     case orderAlreadyCancelled
+    
 
     var id: String { errorDescription ?? "error" }
 
+    
     var errorDescription: String? {
         switch self {
         case .emptySelection:

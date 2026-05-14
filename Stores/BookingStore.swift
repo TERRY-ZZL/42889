@@ -6,6 +6,8 @@
 import Foundation
 import Combine
 
+
+
 @MainActor
 final class BookingStore: ObservableObject {
     @Published private(set) var movies: [Movie] = []
@@ -15,12 +17,9 @@ final class BookingStore: ObservableObject {
     let service = BookingService()
     let repository: MovieRepository
 
-    private let ordersKey = "saved_orders"
-
-    init(repository: MovieRepository? = nil) {
-        self.repository = repository ?? LocalMovieRepository()
+    init(repository: MovieRepository = LocalMovieRepository()) {
+        self.repository = repository
         reloadFromRepository()
-        loadOrders()
     }
 
     func reloadFromRepository() {
@@ -60,8 +59,7 @@ final class BookingStore: ObservableObject {
         let (newShowtime, order) = try service.reserve(seats: seats, in: showtime, of: movie)
         replace(showtime: newShowtime)
         orders.append(order)
-        saveOrders()
-        return order
+        return order 
     }
 
     func cancel(_ order: Order) throws {
@@ -72,29 +70,12 @@ final class BookingStore: ObservableObject {
         replace(showtime: newShowtime)
         if let idx = orders.firstIndex(where: { $0.id == order.id }) {
             orders[idx] = updatedOrder
-            saveOrders()
         }
     }
 
     private func replace(showtime: Showtime) {
         if let idx = showtimes.firstIndex(where: { $0.id == showtime.id }) {
             showtimes[idx] = showtime
-        }
-    }
-
-    private func saveOrders() {
-        let encoder = JSONEncoder()
-        if let data = try? encoder.encode(orders) {
-            UserDefaults.standard.set(data, forKey: ordersKey)
-        }
-    }
-
-    private func loadOrders() {
-        if let data = UserDefaults.standard.data(forKey: ordersKey) {
-            let decoder = JSONDecoder()
-            if let savedOrders = try? decoder.decode([Order].self, from: data) {
-                orders = savedOrders
-            }
         }
     }
 }

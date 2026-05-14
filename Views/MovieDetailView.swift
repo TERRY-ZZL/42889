@@ -1,5 +1,5 @@
 //
-//  MovieDetailview.swift
+//  MovieDetailView.swift
 //  CinmaBooking
 //
 
@@ -12,7 +12,7 @@ struct MovieDetailView: View {
     private static let timeFormatter: DateFormatter = {
         let f = DateFormatter(); f.dateFormat = "HH:mm"; return f
     }()
-
+ 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
@@ -52,7 +52,6 @@ struct MovieDetailView: View {
         .navigationDestination(for: Showtime.self) { st in
             SeatSelectionView(movie: movie, showtimeID: st.id)
         }
-
     }
 
     private var header: some View {
@@ -98,6 +97,7 @@ struct MovieDetailView: View {
         }
     }
 
+    
     private func showtimeRow(_ s: Showtime) -> some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
@@ -118,7 +118,7 @@ struct MovieDetailView: View {
                     .foregroundStyle(s.availableSeats > 0 ? .white.opacity(0.7) : .red)
             }
             Image(systemName: "chevron.right")
-                .foregroundStyle(.white.opacity(0.4))
+                .foregroundStyle(.white.opacity(0.4)) 
         }
         .padding(14)
         .background(.white.opacity(0.06))

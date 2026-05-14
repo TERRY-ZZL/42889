@@ -1,6 +1,9 @@
 //
 //  SeatSelectionView.swift
-//  CinemaBooking
+//  CinmaBooking
+//
+//  Cinma-style seat grid. Uses NavigationLink(isActive:) for iOS 16
+//  compatibility (value-based navigationDestination is iOS 17+).
 //
 
 import SwiftUI
@@ -15,6 +18,9 @@ struct SeatSelectionView: View {
     @State private var navigateToConfirmation = false
     @State private var lastError: BookingError?
 
+    
+    
+    
     private var showtime: Showtime? { store.currentShowtime(id: showtimeID) }
 
     var body: some View {
@@ -89,6 +95,7 @@ struct SeatSelectionView: View {
             }
         }
     }
+    
 
     private var legend: some View {
         HStack(spacing: 18) {

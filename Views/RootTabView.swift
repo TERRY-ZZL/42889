@@ -4,7 +4,10 @@
 //
 
 
+
 import SwiftUI
+
+
 
 struct RootTabView: View {
     var body: some View {
@@ -12,16 +15,12 @@ struct RootTabView: View {
             NavigationStack {
                 MovieListView()
             }
-            .tabItem {
-                Label("Movies", systemImage: "film")
-            }
+            .tabItem { Label("Movies", systemImage: "film") }
 
             NavigationStack {
                 OrdersView()
             }
-            .tabItem {
-                Label("My Orders", systemImage: "ticket")
-            }
+            .tabItem { Label("My Orders", systemImage: "ticket") }
         }
         .tint(.orange)
     }

@@ -1,6 +1,6 @@
 //
 //  BookingService.swift
-//  CinemaBooking
+//  CinmaBooking
 //
 
 import Foundation
@@ -8,6 +8,7 @@ import Foundation
 struct BookingService {
     let maxSeatsPerOrder: Int = 8
 
+    
     func reserve(seats: Set<Seat>, in showtime: Showtime, of movie: Movie,
                  now: Date = Date()) throws -> (updatedShowtime: Showtime, order: Order) {
         guard !seats.isEmpty else { throw BookingError.emptySelection }
@@ -37,7 +38,7 @@ struct BookingService {
         )
         return (updated, order)
     }
-
+ 
     func cancel(order: Order, in showtime: Showtime) throws -> (updatedShowtime: Showtime, updatedOrder: Order) {
         guard order.status == .confirmed else {
             throw BookingError.orderAlreadyCancelled

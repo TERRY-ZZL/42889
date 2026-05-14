@@ -1,6 +1,6 @@
 //
 //  MovieListView.swift
-//  CinemaBooking
+//  CinmaBooking
 //
 
 import SwiftUI

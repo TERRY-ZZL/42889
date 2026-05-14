@@ -1,6 +1,6 @@
 //
 //  OrderConfirmationView.swift
-//  CinemaBooking
+//  CinmaBooking
 //
 
 import SwiftUI
@@ -15,6 +15,8 @@ struct OrderConfirmationView: View {
         return f
     }()
 
+    
+    
     var body: some View {
         VStack(spacing: 22) {
             Image(systemName: "checkmark.seal.fill")
@@ -34,7 +36,8 @@ struct OrderConfirmationView: View {
                 row("Total", String(format: "$%.2f", order.totalPrice))
                 row("Order #", String(order.id.prefix(8)).uppercased())
             }
-            .padding(20)
+            
+            .padding(20) 
             .background(.white.opacity(0.06))
             .clipShape(RoundedRectangle(cornerRadius: 16))
             .padding(.horizontal, 20)
@@ -55,6 +58,8 @@ struct OrderConfirmationView: View {
         .navigationBarTitleDisplayMode(.inline)
     }
 
+    
+    
     private func row(_ key: String, _ value: String) -> some View {
         HStack(alignment: .top) {
             Text(key)

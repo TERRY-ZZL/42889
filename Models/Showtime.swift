@@ -20,6 +20,10 @@ struct Showtime: Identifiable, Hashable {
     var totalSeats: Int { rows * columns }
     var availableSeats: Int { totalSeats - soldSeats.count }
 
+    
+    
+    
+    
     /// Returns a NEW showtime with extra seats marked as sold.
     /// Pure, idempotent, does not mutate self.
     func reserving(_ seats: Set<Seat>) -> Showtime {
@@ -39,4 +43,3 @@ struct Showtime: Identifiable, Hashable {
         (1...rows).contains(seat.row) && (1...columns).contains(seat.column)
     }
 }
-
