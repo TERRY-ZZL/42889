@@ -102,10 +102,10 @@ Press Run
 
 # Author
 
-Zelong Zhao 24612855 （vision1，vision2，GitHub version control and upload）
+Zelong Zhao 24612855 （vision1，vision2，vision6.1，GitHub version control and upload）
 
 Jiaqi Pan 25656113（vision3，vision4）
 
-Hanting Wang 25246036 （vision5&5.5，vision6）
+Hanting Wang 25246036 （vision5&5.5，vision6&6.2）
 
 University of Technology Sydney (UTS)

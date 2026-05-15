@@ -16,9 +16,12 @@ struct Movie: Identifiable, Hashable, Codable {
     let rating: Double
     let genres: [String]
     let synopsis: String
+    /// Optional external review page for the movie, such as Rotten Tomatoes.
+    let rottenTomatoesURL: String?
     /// Name of the image set inside Assets.xcassets (e.g. "poster_oppenheimer").
     let posterAsset: String
 
+    
     var durationDescription: String {
         let h = durationMinutes / 60
         let m = durationMinutes % 60
@@ -29,6 +32,7 @@ struct Movie: Identifiable, Hashable, Codable {
         genres.joined(separator: " · ")
     }
 
+    
     /// Convenience for keyword search.
     func matches(keyword: String) -> Bool {
         let k = keyword.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()

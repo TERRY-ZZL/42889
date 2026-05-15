@@ -3,7 +3,11 @@
 //  CinmaBooking
 //
 
+
+
 import SwiftUI
+
+
 
 struct MovieDetailView: View {
     let movie: Movie
@@ -13,6 +17,9 @@ struct MovieDetailView: View {
         let f = DateFormatter(); f.dateFormat = "HH:mm"; return f
     }()
  
+    
+    
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
@@ -54,6 +61,8 @@ struct MovieDetailView: View {
         }
     }
 
+    
+    
     private var header: some View {
         HStack(alignment: .top, spacing: 16) {
             Image(movie.posterAsset)
@@ -70,9 +79,25 @@ struct MovieDetailView: View {
                 Text(movie.title)
                     .font(.title2.bold())
                     .foregroundStyle(.white)
-                Label(String(format: "%.1f / 10", movie.rating),
-                      systemImage: "star.fill")
-                    .foregroundStyle(.yellow)
+                if let urlString = movie.rottenTomatoesURL,
+                   let url = URL(string: urlString) {
+                    Link(destination: url) {
+                        Label(String(format: "%.1f / 10", movie.rating),
+                              systemImage: "star.fill")
+                            .font(.headline)
+                            .foregroundStyle(.yellow)
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 6)
+                            .background(.yellow.opacity(0.12))
+                            .clipShape(Capsule())
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel("Open Rotten Tomatoes rating")
+                } else {
+                    Label(String(format: "%.1f / 10", movie.rating),
+                          systemImage: "star.fill")
+                        .foregroundStyle(.yellow)
+                }
                 Label(movie.durationDescription, systemImage: "clock")
                     .foregroundStyle(.white.opacity(0.85))
                 Label(String(movie.year), systemImage: "calendar")
@@ -82,6 +107,8 @@ struct MovieDetailView: View {
             Spacer(minLength: 0)
         }
     }
+    
+    
 
     private var tagsView: some View {
         HStack(spacing: 6) {
@@ -118,7 +145,7 @@ struct MovieDetailView: View {
                     .foregroundStyle(s.availableSeats > 0 ? .white.opacity(0.7) : .red)
             }
             Image(systemName: "chevron.right")
-                .foregroundStyle(.white.opacity(0.4)) 
+                .foregroundStyle(.white.opacity(0.4))
         }
         .padding(14)
         .background(.white.opacity(0.06))
